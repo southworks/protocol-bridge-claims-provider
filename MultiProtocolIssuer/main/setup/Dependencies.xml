@@ -2,7 +2,7 @@
 <DependencyCheckerConfiguration>
 
   <title>Protocol Bridge Claims Provider</title>
-  <!--<image>.\Resources\customLogo.png</image>-->
+  <image>.\resources\swLogo.png</image>
   <welcomeText>Before you can compile and run the provided content in this sample, you must install the required software and configure your computer. The Configuration Wizard will scan your system for the required software and step you through the required configuration.
 Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
 
