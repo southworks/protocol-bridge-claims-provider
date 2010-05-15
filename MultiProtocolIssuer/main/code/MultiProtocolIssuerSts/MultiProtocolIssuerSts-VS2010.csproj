@@ -13,8 +13,7 @@
     <AssemblyName>MultiProtocolIssuerSts</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
+    <FileUpgradeFlags></FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
   </PropertyGroup>
@@ -38,7 +37,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="ClaimsPolicyEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ClaimsPolicyEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\ClaimsPolicyEngine.dll</HintPath>
     </Reference>

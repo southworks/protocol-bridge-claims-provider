@@ -10,10 +10,12 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
     <title>Steps Summary</title>    
     <preview name="Check dependencies" description="Check prerequisites for the Protocol Bridge Claims Provider"></preview>
 	<preview name="Setup certificate" description="Install and configure certificate for the sample (WARNING: this setup will overwrite any existing certificate with subject “CN=www.multiprotocolissuer.net” on your local machine store)"></preview>
+	<preview name="Update hosts file" description="Update hosts file to add entry for www.multiprotocolissuer.net"></preview>
   </previews>
   
   <tasks>
 	<task description="Setup Certificate" scriptName=".\Scripts\tasks\SetupCertificate.cmd" displayConsole="true" />
+	<task description="Update hosts file" scriptName=".\Scripts\tasks\addHosts.cmd" displayConsole="false" />
   </tasks>
   
   <dependencies>
