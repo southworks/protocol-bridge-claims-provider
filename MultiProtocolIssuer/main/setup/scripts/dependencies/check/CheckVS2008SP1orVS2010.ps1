@@ -131,6 +131,6 @@ $hasVS2008SP1 = $hasVS2008SP1 -or (Check-VisualStudio2008SP1 -ProductFamily 'VS'
 if ($hasVS2008SP1) { return $hasVS2008SP1; }
 
 $hasVS2010 = $FALSE;
-$hasVS2010 = Check-VisualStudio2010 -SearchFor 'Microsoft Visual Studio 2010 *RC*';
+$hasVS2010 = Check-VisualStudio2010 -SearchFor 'Microsoft Visual Studio 2010*';
 
 return $hasVS2010;
