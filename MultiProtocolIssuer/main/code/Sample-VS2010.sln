@@ -15,13 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiProtocolIssuerSts.Tests-VS2010", "MultiProtocolIssuerSts.Tests\MultiProtocolIssuerSts.Tests-VS2010.csproj", "{C0777760-3481-4C07-B79B-29683F3F8F09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.ClaimsPolicyEngine.Tests-VS2010", "..\..\ClaimsPolicyEngine\code\Southworks.IdentityModel.ClaimsPolicyEngine.Tests\Southworks.IdentityModel.ClaimsPolicyEngine.Tests-VS2010.csproj", "{5D12A559-301C-4397-A519-85611B1FCF22}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiProtocolIssuerSts-VS2010", "MultiProtocolIssuerSts\MultiProtocolIssuerSts-VS2010.csproj", "{D22621C7-529C-4B59-A3ED-9CDD02D84BBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.MultiProtocolIssuer-VS2010", "Southworks.IdentityModel.MultiProtocolIssuer\Southworks.IdentityModel.MultiProtocolIssuer-VS2010.csproj", "{97A8192D-5E2D-4D6B-A450-1166B65CF564}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.ClaimsPolicyEngine-VS2010", "..\..\ClaimsPolicyEngine\code\Southworks.IdentityModel.ClaimsPolicyEngine\Southworks.IdentityModel.ClaimsPolicyEngine-VS2010.csproj", "{09FCB3DD-B111-439F-8574-ED024064906C}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
