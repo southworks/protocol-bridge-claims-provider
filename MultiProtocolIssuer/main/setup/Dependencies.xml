@@ -15,7 +15,7 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
   
   <tasks>
 	<task description="Setup Certificate" scriptName=".\Scripts\tasks\SetupCertificate.cmd" displayConsole="true" />
-	<task description="Update hosts file" scriptName=".\Scripts\tasks\addHosts.cmd" displayConsole="false" />
+	<task description="Update hosts file" scriptName=".\Scripts\tasks\addHosts.cmd" displayConsole="true" />
   </tasks>
   
   <dependencies>
