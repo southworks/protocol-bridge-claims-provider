@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sample xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
+	<Author>
+		<Blog></Blog>
+		<Email></Email>
+		<Name></Name>
+	</Author>
+	<Title>Protocol Bridge Claims Provider</Title>
+	<Description>.</Description>
+	<DownloadUrl></DownloadUrl>
+	<Version>1.0</Version>
+	<Source>.\</Source>
+	<Id>ProtocolBridgeClaimsProvider</Id>
+	<DependencyChecker ShortcutName="CheckDependencies.cmd" ScriptsFolder=".\setup\scripts">.\setup\Dependencies.xml</DependencyChecker>
+</Sample>

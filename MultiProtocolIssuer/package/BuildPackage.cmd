@@ -1,0 +1,1 @@
+%ECF%\PackageSample.cmd "..\main\Sample.xml" ".\Output" SelfExtracting 

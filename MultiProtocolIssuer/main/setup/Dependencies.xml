@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DependencyCheckerConfiguration>
+
+  <title>Protocol Bridge Claims Provider</title>
+  <!--<image>.\Resources\customLogo.png</image>-->
+  <welcomeText>Before you can compile and run the provided content in this sample, you must install the required software and configure your computer. The Configuration Wizard will scan your system for the required software and step you through the required configuration.
+Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
+
+  <previews>
+    <title>Steps Summary</title>    
+    <preview name="Check dependencies" description="Check prerequisites for the Protocol Bridge Claims Provider"></preview>
+	<preview name="Setup certificate" description="Install and configure certificate for the sample (WARNING: this setup will overwrite any existing certificate with subject “CN=www.multiprotocolissuer.net” on your local machine store)"></preview>
+  </previews>
+  
+  <tasks>
+	<task description="Setup Certificate" scriptName=".\Scripts\tasks\SetupCertificate.cmd" displayConsole="true" />
+  </tasks>
+  
+  <dependencies>
+	<os type="Vista;Server" buildNumber="6002">
+	
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckVS2008SP1orVS2010.ps1"
+                    enabled="true"
+                    optional="false"
+                    title="Microsoft Visual Studio 2008 SP1 / Visual Studio 2010"
+                    explanation="The sample requires Visual Studio 2008 SP1 or Visual Studio 2010"
+                    scriptName=""
+                    downloadUrl="http://www.microsoft.com/visualstudio" />
+				
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckIIS7.ps1"
+                    enabled="true"
+                    optional="false"
+					required="true" 
+                    title="Microsoft IIS7"
+                    explanation="The sample requires IIS7 (with ASP.NET)"
+                    scriptName=".\scripts\Dependencies\Setup\install-iis.bat" />
+
+		<dependency
+					value=".\scripts\Dependencies\Check\CheckWifRuntime.ps1"
+					enabled="true"
+					optional="false"
+					title="Windows Identity Foundation Runtime"
+					explanation="The sample requires Windows Identity Foundation Runtime"
+					scriptName=""
+					downloadUrl="http://support.microsoft.com/kb/974405" />
+					
+    </os>
+	
+	<os type="Vista;Server" buildNumber="7600">
+	
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckVS2008SP1orVS2010.ps1"
+                    enabled="true"
+                    optional="false"
+                    title="Microsoft Visual Studio 2008 SP1 / Visual Studio 2010"
+                    explanation="The sample requires Visual Studio 2008 SP1 or Visual Studio 2010"
+                    scriptName=""
+                    downloadUrl="http://www.microsoft.com/visualstudio" />
+				
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckIIS7.ps1"
+                    enabled="true"
+                    optional="false"
+					required="true" 
+                    title="Microsoft IIS7"
+                    explanation="The sample requires IIS7 (with ASP.NET)"
+                    scriptName=".\scripts\Dependencies\Setup\install-iis.bat" />
+
+		<dependency
+					value=".\scripts\Dependencies\Check\CheckWifRuntime.ps1"
+					enabled="true"
+					optional="false"
+					title="Windows Identity Foundation Runtime"
+					explanation="The sample requires Windows Identity Foundation Runtime"
+					scriptName=""
+					downloadUrl="http://support.microsoft.com/kb/974405" />
+
+		<dependency
+					value=".\scripts\Dependencies\Check\CheckLoadUserProfile.ps1"
+					enabled="true"
+					optional="false"
+					title="DefaultAppPool - Load User Profile"
+					explanation="Enable Load User Profile for DefaultAppPool"
+					scriptName=".\scripts\Dependencies\Setup\enableLoadUserProfile.bat" />
+
+    </os>
+  </dependencies>
+  
+  <errorMessages>
+    <errorMessage error="OperatingSystemNotSupported">
+      <![CDATA[<b>Your current OS is not supported by Protocol Bridge Claims Provider. This sample uses Windows Identitiy Foundation that requieres Windows Vista SP2, Windows Server 2008 SP2, Windows 7 or Windows Server 2008 R2.</b><br/><br/><br/><br/><br/><br/>]]>
+    </errorMessage>
+  </errorMessages>
+  
+</DependencyCheckerConfiguration>

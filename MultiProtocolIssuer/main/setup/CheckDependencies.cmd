@@ -1,0 +1,1 @@
+@Start  /wait ..\..\Assets\DependencyChecker\ConfigurationWizard.exe Dependencies.xml
