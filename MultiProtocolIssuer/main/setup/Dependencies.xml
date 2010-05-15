@@ -38,6 +38,15 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
                     scriptName=".\scripts\Dependencies\Setup\install-iis.bat" />
 
 		<dependency
+                    value=".\scripts\Dependencies\Check\CheckHttpsInIIS.ps1"
+                    enabled="true"
+                    optional="false"
+					required="true" 
+                    title="IIS7 - SSL support"
+                    explanation="The sample requires configured SSL in IIS"
+                    scriptName=".\Scripts\tasks\SetupSSLCertificate.cmd" />
+					
+		<dependency
 					value=".\scripts\Dependencies\Check\CheckWifRuntime.ps1"
 					enabled="true"
 					optional="false"
@@ -68,6 +77,15 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
                     explanation="The sample requires IIS7 (with ASP.NET)"
                     scriptName=".\scripts\Dependencies\Setup\install-iis.bat" />
 
+		<dependency
+                    value=".\scripts\Dependencies\Check\CheckHttpsInIIS.ps1"
+                    enabled="true"
+                    optional="false"
+					required="true" 
+                    title="IIS7 - SSL support"
+                    explanation="The sample requires configured SSL in IIS"
+                    scriptName=".\Scripts\tasks\SetupSSLCertificate.cmd" />
+					
 		<dependency
 					value=".\scripts\Dependencies\Check\CheckWifRuntime.ps1"
 					enabled="true"

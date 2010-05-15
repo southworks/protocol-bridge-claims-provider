@@ -130,12 +130,6 @@
   <ItemGroup>
     <Content Include="Policy.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\ClaimsPolicyEngine\code\Southworks.IdentityModel.ClaimsPolicyEngine\Southworks.IdentityModel.ClaimsPolicyEngine.csproj">
-      <Project>{09FCB3DD-B111-439F-8574-ED024064906C}</Project>
-      <Name>Southworks.IdentityModel.ClaimsPolicyEngine</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

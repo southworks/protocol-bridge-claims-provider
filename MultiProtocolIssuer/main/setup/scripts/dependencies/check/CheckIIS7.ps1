@@ -26,5 +26,6 @@ $query = Get-WmiObject Win32_Service | where {$_.Name -eq "w3svc" }
 
 $hasIIS = ($query -ne $null);
 $hasAspNet = Check-RegistryValue -PropertyPath "HKLM:\SOFTWARE\Microsoft\INETSTP\Components" -PropertyName "ASPNET" -PropertyValue "1";
+$hasMetabase = Check-RegistryValue -PropertyPath "HKLM:\SOFTWARE\Microsoft\INETSTP\Components" -PropertyName "Metabase" -PropertyValue "1";
 
-$hasIIS -and $hasAspNet;
+$hasIIS -and $hasAspNet -and $hasMetabase;

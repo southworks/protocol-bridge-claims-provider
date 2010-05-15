@@ -1,6 +1,6 @@
 @echo off
 
-echo Removing certificates...
+echo Removing certificate...
 echo.
 
 certutil -delstore My "www.multiprotocolissuer.net"
