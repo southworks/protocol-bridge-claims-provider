@@ -55,6 +55,16 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
 					scriptName=""
 					downloadUrl="http://support.microsoft.com/kb/974405" />
 					
+		<dependency
+				  value=".\scripts\Dependencies\Check\CheckAspNetMVC2.ps1"
+				  enabled="true"
+				  optional="false"
+				  required="true"
+				  title="Microsoft ASP.NET MVC 2"
+				  explanation="The sample requires Microsoft ASP.NET MVC 2"
+				  scriptName=""
+				  downloadUrl="http://www.microsoft.com/downloads/details.aspx?FamilyID=C9BA1FE1-3BA8-439A-9E21-DEF90A8615A9" />
+					
     </os>
 	
 	<os type="Vista;Server" buildNumber="7600">
@@ -102,6 +112,16 @@ Click Next to continue or Cancel to exit the Configuration Wizard.</welcomeText>
 					title="DefaultAppPool - Load User Profile"
 					explanation="Enable Load User Profile for DefaultAppPool"
 					scriptName=".\scripts\Dependencies\Setup\enableLoadUserProfile.bat" />
+					
+		<dependency
+				  value=".\scripts\Dependencies\Check\CheckAspNetMVC2.ps1"
+				  enabled="true"
+				  optional="false"
+				  required="true"
+				  title="Microsoft ASP.NET MVC 2"
+				  explanation="The sample requires Microsoft ASP.NET MVC 2"
+				  scriptName=""
+				  downloadUrl="http://www.microsoft.com/downloads/details.aspx?FamilyID=C9BA1FE1-3BA8-439A-9E21-DEF90A8615A9" />
 
     </os>
   </dependencies>
