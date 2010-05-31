@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scopes>
+  
+  <scope uri="http://myScope1">
+    <claimTypes>
+      <claimType fullName="http://myClaimType" displayName="myClaimTypeInScope1"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer" displayName="myIssuer" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="all" name="rule1">
+        <input>
+          <claim type="myClaimTypeInScope1" issuer="myIssuer" value="myInputClaim"/>
+        </input>
+        <output type="myClaimTypeInScope1" issuer="myIssuer" value="myOutputClaim"/>
+      </rule>
+    </rules>
+  </scope>
+  
+  <scope uri="http://myScope2">
+    <claimTypes>
+      <claimType fullName="http://myClaimType" displayName="myClaimTypeInScope2"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer" displayName="myIssuer" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="all" name="rule1">
+        <input>
+          <!-- Claim Types used on the claims must be declared inside the current scope -->
+          <claim type="myClaimTypeInScope1" issuer="myIssuer" value="invalidClaim"/>
+        </input>
+        <output type="myClaimTypeInScope2" value="myOutputClaim"/>
+      </rule>
+    </rules>
+  </scope>
+  
+</scopes>

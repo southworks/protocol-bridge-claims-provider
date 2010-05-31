@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.ClaimsPolicyEngine", "Southworks.IdentityModel.ClaimsPolicyEngine\Southworks.IdentityModel.ClaimsPolicyEngine.csproj", "{09FCB3DD-B111-439F-8574-ED024064906C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Southworks.IdentityModel.ClaimsPolicyEngine.Tests", "Southworks.IdentityModel.ClaimsPolicyEngine.Tests\Southworks.IdentityModel.ClaimsPolicyEngine.Tests.csproj", "{5D12A559-301C-4397-A519-85611B1FCF22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8656A9DB-04D7-455F-B1B6-D7A236D0C72D}"
+	ProjectSection(SolutionItems) = preProject
+		ClaimsPolicyEngine.vsmdi = ClaimsPolicyEngine.vsmdi
+		Southworks.IdentityMode.ClaimsPolicyEngine.testrunconfig = Southworks.IdentityMode.ClaimsPolicyEngine.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ClaimsPolicyEngine.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09FCB3DD-B111-439F-8574-ED024064906C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FCB3DD-B111-439F-8574-ED024064906C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FCB3DD-B111-439F-8574-ED024064906C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FCB3DD-B111-439F-8574-ED024064906C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D12A559-301C-4397-A519-85611B1FCF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D12A559-301C-4397-A519-85611B1FCF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D12A559-301C-4397-A519-85611B1FCF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D12A559-301C-4397-A519-85611B1FCF22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

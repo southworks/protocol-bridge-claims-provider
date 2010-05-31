@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scopes>
+  <scope uri="https://relyingParty1.com">
+    <claimTypes>
+      <!-- Claim types definition for OpenID AX profile-->
+      <claimType fullName="http://axschema.org/contact/email" displayName="email-ax" />
+      <claimType fullName="http://axschema.org/namePerson" displayName="fullname-ax" />
+      <claimType fullName="http://axschema.org/person/gender" displayName="gender-ax" />
+      
+      <!-- Claim types definition for OpenID Sreg profile-->
+      <claimType fullName="http://schemas.openid.net/contact/email" displayName="email-sreg" />
+      <claimType fullName="http://schemas.openid.net/namePerson" displayName="fullname-sreg" />
+      <claimType fullName="http://schemas.openid.net/gender" displayName="gender-sreg" />
+
+      <!-- Claim types definition for OAuth profile-->
+      
+      <!-- Claim types definition for Output Claims-->
+      <claimType fullName="http://custom/email" displayName="email-custom" />
+      <claimType fullName="http://custom/namePerson" displayName="fullname-custom" />
+      <claimType fullName="http://custom/gender" displayName="gender-custom" />
+      
+    </claimTypes>
+    <issuers>
+      <issuer protocol="OpenID.AX" uri="https://yahoo.com/" displayName="YahooAX">
+        <claimDemandLevels>
+          <claimType type="email-ax" demandLevel="Request" />
+          <claimType type="fullname-ax" demandLevel="NoRequest" />
+          <claimType type="gender-ax" demandLevel="Require" />
+        </claimDemandLevels>
+      </issuer>
+      
+      <issuer protocol="OpenID.Sreg" uri="https://{id}.myopenid.com/" displayName="YahooSreg">
+        <claimDemandLevels>
+          <claimType type="email-sreg" demandLevel="Request" />
+          <claimType type="fullname-sreg" demandLevel="NoRequest" />
+          <claimType type="gender-sreg" demandLevel="Require" />
+        </claimDemandLevels>
+      </issuer>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="email-ax" issuer="YahooSreg" value="*"/>
+        </input>
+        <output type="email-custom" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="fullname-ax" issuer="YahooSreg" value="*"/>
+        </input>
+        <output type="fullname-custom" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="gender-sreg" issuer="YahooSreg" value="M"/>
+        </input>
+        <output type="gender-custom" value="Male"/>
+      </rule>
+    </rules>
+  </scope>
+  <scope uri="https://relyingParty2.com">
+  </scope>
+</scopes>

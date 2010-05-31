@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scopes>
+
+  <scope uri="http://localhost/1">
+    <claimTypes>
+      <claimType fullName="http://myInputClaimType1" displayName="myInputClaimType1"/>
+      <claimType fullName="http://myOutputClaimType1" displayName="myOutputClaimType1"/>
+      <claimType fullName="http://myClaimType" displayName="myClaimType"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer1" displayName="myIssuer1" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+      <issuer uri="http://myIssuer2" displayName="myIssuer2" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b492"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="all" name="rule1">
+        <input>
+          <claim type="myInputClaimType1" issuer="myIssuer1" value="*"/>
+        </input>
+        <output type="myOutputClaimType1" issuer="myIssuer1" value="myOutputClaimValue"/>
+      </rule>
+      <rule assertionsMatch="any" name="rule2">
+        <input>
+          <claim type="myInputClaimType1" issuer="myIssuer2" value="inputClaimValue"/>
+        </input>
+        <output type="myOutputClaimType1" issuer="myIssuer2" copyFrom="INPUT_VALUE"/>
+      </rule>
+    </rules>
+  </scope>
+
+</scopes>

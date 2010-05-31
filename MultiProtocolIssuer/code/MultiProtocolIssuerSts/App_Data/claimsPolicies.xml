@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scopes>
+  <scope uri="https://localhost/SampleRP">
+    <claimTypes>
+      <claimType fullName="http://axschema.org/namePerson" displayName="openid.ax.fullname" />
+      <claimType fullName="http://axschema.org/contact/email" displayName="openid.ax.email"  />
+      <claimType fullName="http://axschema.org/person/gender" displayName="openid.ax.gender" />
+      
+      <claimType fullName="http://schema.openid.net/namePerson" displayName="openid.sreg.fullname" />
+      <claimType fullName="http://schema.openid.net/contact/email" displayName="openid.sreg.email"  />
+      <claimType fullName="http://schema.openid.net/person/gender" displayName="openid.sreg.gender" />
+      
+      <claimType fullName="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" displayName="givenname"/>
+      <claimType fullName="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" displayName="email"/>
+      <claimType fullName="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/gender" displayName="gender" />
+      <claimType fullName="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" displayName="name" />
+
+      <claimType fullName="http://schema.facebook.com/me/id" displayName="facebook.name"/>
+      <claimType fullName="http://schema.facebook.com/me/name" displayName="facebook.fullname"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="urn:Yahoo:AX" thumbprint="" displayName="YahooOpenID"/>
+      <issuer uri="urn:MyOpenId:SReg" thumbprint="" displayName="MyOpenID"/>
+      <issuer uri="urn:LiveId" thumbprint="" displayName="LiveId"/>
+      <issuer uri="urn:Facebook" thumbprint="" displayName="Facebook"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.ax.fullname" issuer="YahooOpenID" value="*"/>
+        </input>
+        <output type="givenname" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="name" issuer="YahooOpenID" value="*"/>
+        </input>
+        <output type="name" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.ax.email" issuer="YahooOpenID" value="*"/>
+        </input>
+        <output type="email" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.ax.gender" issuer="YahooOpenID" value="M"/>
+        </input>
+        <output type="gender" value="Male"/>
+      </rule>
+
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.sreg.fullname" issuer="MyOpenID" value="*"/>
+        </input>
+        <output type="givenname" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.sreg.email" issuer="MyOpenID" value="*"/>
+        </input>
+        <output type="email" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="openid.sreg.gender" issuer="MyOpenID" value="*"/>
+        </input>
+        <output type="gender" copyFrom="INPUT_VALUE"/>
+      </rule>
+
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="name" issuer="LiveId" value="*"/>
+        </input>
+        <output type="name" copyFrom="INPUT_VALUE"/>
+      </rule>
+
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="facebook.name" issuer="Facebook" value="*"/>
+        </input>
+        <output type="name" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="facebook.fullname" issuer="Facebook" value="*"/>
+        </input>
+        <output type="givenname" copyFrom="INPUT_VALUE"/>
+      </rule>
+      
+    </rules>
+  </scope>  
+</scopes>

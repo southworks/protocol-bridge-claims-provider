@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scopes>
+  <scope uri="http://localhost">
+    <claimTypes>
+      <claimType fullName="http://myInputClaimType1" displayName="myInputClaimType1"/>
+      <claimType fullName="http://myInputClaimType2" displayName="myInputClaimType2"/>
+      <claimType fullName="http://myOutputClaimType" displayName="myOutputClaimType"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer" displayName="myIssuer" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="any" name="rule1">
+        <input>
+          <claim type="myInputClaimType1" issuer="myIssuer" value="*"/>
+          <claim type="myInputClaimType2" issuer="myIssuer" value="*"/>
+        </input>
+        <!-- copyFrom can only be true when there is a single input claim -->
+        <output type="myOutputClaimType" issuer="myIssuer" copyFrom="INPUT_VALUE"/>
+      </rule>
+    </rules>
+  </scope>
+</scopes>

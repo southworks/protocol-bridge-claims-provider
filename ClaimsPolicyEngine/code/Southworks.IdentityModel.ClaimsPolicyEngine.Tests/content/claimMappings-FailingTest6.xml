@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scopes>
+  <scope uri="http://localhost">
+    <claimTypes>
+      <claimType fullName="http://myClaimType" displayName="myClaimType"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer" displayName="myIssuer" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="any" name="rule1">
+        <input>
+          <claim type="myClaimType" issuer="myIssuer" value="*"/>
+        </input>
+        <!-- copyFrom can only be true when the value attribute of the output claim is not present -->
+        <output type="myClaimType" issuer="myIssuer" value="claimValueCannotBeSet" copyFrom="INPUT_VALUE"/>
+      </rule>
+    </rules>
+  </scope>
+</scopes>
+

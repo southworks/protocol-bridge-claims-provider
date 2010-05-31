@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scopes>
+  <scope uri="http://localhost">
+    <claimTypes>
+      <claimType fullName="http://myClaimType" displayName="myClaimType"/>
+    </claimTypes>
+    <issuers>
+      <issuer uri="http://myIssuer" displayName="myIssuer" thumbprint="6f7051ece706096ac5a05ecb1860e2151c11b491"/>
+    </issuers>
+    <rules>
+      <rule assertionsMatch="all" name="rule1">
+        <input>
+          <claim type="myClaimType" issuer="myIssuer" value="myInputClaim"/>
+        </input>
+        <!-- Invalid Output Claim: the Claim Type is not defined on the claimTypes section -->
+        <output type="inexistentClaimType" issuer="myIssuer" value="invalidClaim"/>
+      </rule>
+    </rules>
+  </scope>
+</scopes>
