@@ -1102,16 +1102,16 @@ is a WS-Federation aware token issuer that allows bridging with other
 authentication protocols like OpenID, OAuth or other custom protocols like
 LiveID.</span></p>
 
-<p class=MsoNormal><img width=506 height=225 id="Picture 6"
-src="index_files/image001.gif"></p>
+<p class=MsoNormal><img width=632 height=281 id="Picture 6"
+src="index_files/image001.png"></p>
 
 <p class=MsoNormal><span lang=EN-US>Once installed, open a browser and go to
 one of the sample web applications <a href="https://localhost/SampleRP">https://localhost/SampleRP</a>.
 This is the flow between the web application (ASP.NET MVC with WIF), the STS
 (ASP.NET MVC with WIF) and Yahoo identity provider (OpenID).</span></p>
 
-<p class=MsoNormal><img border=0 width=625 height=840 id="Picture 7"
-src="index_files/image002.gif"></p>
+<p class=MsoNormal><img border=0 width=781 height=1050 id="Picture 7"
+src="index_files/image002.png"></p>
 
 <h2><span lang=EN-US>Configuring an ASP.NET application to use the Multi
 Protocol STS</span></h2>
@@ -1126,22 +1126,22 @@ application to trusts the Protocol Bridge Claims Provider.</span></p>
 <p class=ppNumberList><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Create a new <b>ASP.NET Web Site</b></span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=405
-height=262 id="Picture 14" src="index_files/image003.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=506
+height=328 id="Picture 14" src="index_files/image003.jpg"></p>
 
 <p class=ppNumberList><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Right click on the project and press <b>Add STS
 Reference…</b></span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=280
-height=200 id="Picture 13" src="index_files/image004.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=350
+height=250 id="Picture 13" src="index_files/image004.png"></p>
 
 <p class=ppNumberList><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Leave the default values but add <b>Default.aspx</b>
 in the <b>Application URI textbox</b>. </span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=589
-height=444 id="Picture 35" src="index_files/image005.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=736
+height=555 id="Picture 35" src="index_files/image005.jpg"></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -1152,8 +1152,8 @@ and virtual directory in IIS default website). The default url is <a
 href="https://www.multiprotocolissuer.net/MultiProtocolIssuerSts">https://www.multiprotocolissuer.net/MultiProtocolIssuerSts</a>.
 Press Yes when the certificate warning shows up.</span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=589
-height=444 id="Picture 20" src="index_files/image006.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=736
+height=555 id="Picture 20" src="index_files/image006.jpg"></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -1161,15 +1161,15 @@ height=444 id="Picture 20" src="index_files/image006.jpg"></p>
 </span></span><span lang=EN-US>Select <b>No encryption</b> and press Next. By
 default the Multi Protocol STS does not encrypt tokens.</span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=589
-height=444 id="Picture 26" src="index_files/image007.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=736
+height=555 id="Picture 26" src="index_files/image007.jpg"></p>
 
 <p class=ppNumberList><span lang=EN-US>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>These are the claims offered by the STS. Press
 Next</span></p>
 
-<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=589
-height=444 id="Picture 29" src="index_files/image008.jpg"></p>
+<p class=ppFigureIndent style='text-indent:0cm'><img border=0 width=736
+height=555 id="Picture 29" src="index_files/image008.jpg"></p>
 
 <p class=ppNumberList><span lang=EN-US>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Press Finish.</span></p>
@@ -1208,7 +1208,8 @@ XHTML 1.0 Transitional//EN&quot;
 background:#F7F7FF'><span lang=EN-US>&nbsp;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
-background:#F7F7FF'><span lang=EN-US>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;</span></p>
+background:#F7F7FF'><span lang=EN-US>&lt;html
+xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
 background:#F7F7FF'><span lang=EN-US>&lt;head runat=&quot;server&quot;&gt;</span></p>
@@ -1223,8 +1224,7 @@ background:#F7F7FF'><span lang=EN-US>&lt;/head&gt;</span></p>
 background:#F7F7FF'><span lang=EN-US>&lt;body&gt;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
-background:#F7F7FF'><span lang=EN-US>    &lt;form id=&quot;form1&quot;
-runat=&quot;server&quot;&gt;</span></p>
+background:#F7F7FF'><span lang=EN-US>    &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
 background:#F7F7FF'><span lang=EN-US>    &lt;div&gt;</span></p>
@@ -1237,7 +1237,7 @@ background:#F7F7FF'><span lang=EN-US>    &lt;% foreach (var claim in
 background:#F7F7FF'><span lang=EN-US>       {  %&gt;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
-background:#F7F7FF'><span lang=EN-US>       &lt;strong&gt;&lt;%=claim.ClaimType
+background:#F7F7FF'><span lang=EN-US>       &lt;strong&gt;&lt;%=claim.ClaimType
 %&gt;&lt;/strong&gt;:&lt;%=claim.Value %&gt;&lt;br /&gt;</span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
@@ -1277,16 +1277,16 @@ border-right:none;padding:1.0pt 0cm 1.0pt 0cm;background:#F7F7FF;margin-left:
 background:#F7F7FF'><span lang=EN-US>&lt;scope </span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
-background:#F7F7FF'><span lang=EN-US>      uri=&quot;http://localhost:6879/WebSite1/Default.aspx&quot;
-</span></p>
+background:#F7F7FF'><span lang=EN-US>     
+uri=&quot;http://localhost:6879/WebSite1/Default.aspx&quot; </span></p>
 
 <p class=ppCodeIndentCxSpMiddle style='margin-left:0cm;text-indent:0cm;
 background:#F7F7FF'><span lang=EN-US>     
 identifier=&quot;http://localhost:6879/WebSite1/Default.aspx&quot; </span></p>
 
 <p class=ppCodeIndentCxSpLast style='margin-left:0cm;text-indent:0cm;
-background:#F7F7FF'><span lang=EN-US>     
-useClaimsPolicyEngine=&quot;false&quot; /&gt;</span></p>
+background:#F7F7FF'><span lang=EN-US>      useClaimsPolicyEngine=&quot;false&quot;
+/&gt;</span></p>
 
 </div>
 
@@ -1808,23 +1808,23 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 <h2><span lang=EN-US>Main contributors</span></h2>
 
 <p class=ppBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Juan Pablo Garcia (blog: <span lang=EN-US><a
-href="http://blogs.southworks.net/jpgarcia"><span lang=ES-AR>http://blogs.southworks.net/jpgarcia</span></a></span><span
-lang=EN-US> </span>twitter: @jpgd)</p>
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Juan Pablo Garcia (blog: <a
+href="http://blogs.southworks.net/jpgarcia">http://blogs.southworks.net/jpgarcia</a>
+twitter: @jpgd mail: juanpablo dot garcia at southworks dot net)</span></p>
 
 <p class=ppBodyText style='margin-left:36.0pt;text-indent:-18.0pt'><span
 lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Matias Woloski (blog: <a
 href="http://blogs.southwokrs.net/mwoloski">http://blogs.southwokrs.net/mwoloski</a>
-twitter:@woloski)</span></p>
+twitter:@woloski mail: matias at southworks dot net)</span></p>
 
 <p class=ppBodyText><span lang=EN-US>&nbsp;</span></p>
 
 <p class=ppBodyText style='margin-left:0cm;text-indent:0cm'><span lang=EN-US><a
 href="http://github.com/southworks"><span lang=ES-AR style='color:windowtext;
-text-decoration:none'><img border=0 width=84 height=84 id="Picture 1"
-src="index_files/image009.gif" alt="2010-05-30 17:06:42"></span></a></span></p>
+text-decoration:none'><img border=0 width=105 height=105 id="Picture 1"
+src="index_files/image009.png" alt="2010-05-30 17:06:42"></span></a></span></p>
 
 </div>
 
