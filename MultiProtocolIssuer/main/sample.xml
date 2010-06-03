@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Sample xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
 	<Author>
-		<Blog></Blog>
-		<Email></Email>
-		<Name></Name>
+		<Blog>http://blogs.southworks.net/</Blog>
+		<Email>info@southworks.net</Email>
+		<Name>Southworks</Name>
 	</Author>
 	<Title>Protocol Bridge Claims Provider</Title>
-	<Description>.</Description>
-	<DownloadUrl></DownloadUrl>
-	<Version>1.0</Version>
+	<Description>An implementation of a bridge that talks WS-Federation and SAML tokens on one side and OpenID, OAuth or any other protocol on the identity provider side using Windows Identity Foundation.</Description>
+	<DownloadUrl>http://github.com/southworks/protocol-bridge-claims-provider/downloads</DownloadUrl>
+	<Version>0.8</Version>
 	<Source>.\</Source>
-	<Id>ProtocolBridgeClaimsProvider</Id>
+	<Id>ProtocolBridgeClaimsProvider-v0.8</Id>
 	<DependencyChecker ShortcutName="CheckDependencies.cmd" ScriptsFolder=".\setup\scripts">.\setup\Dependencies.xml</DependencyChecker>
 </Sample>
