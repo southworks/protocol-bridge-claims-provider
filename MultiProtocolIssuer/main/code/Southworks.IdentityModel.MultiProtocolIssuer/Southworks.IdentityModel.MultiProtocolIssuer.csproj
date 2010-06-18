@@ -115,6 +115,9 @@
     <Compile Include="Model\MultiProtocolIssuer.cs" />
     <Compile Include="Model\Scope.cs" />
     <Compile Include="Protocols\LiveId\LiveIdHandler.cs" />
+    <Compile Include="Protocols\OAuth\AccessToken.cs" />
+    <Compile Include="Protocols\OAuth\OAuthHelper.cs" />
+    <Compile Include="Protocols\OAuth\TwitterHandler.cs" />
     <Compile Include="Protocols\OAuth\FacebookHandler.cs" />
     <Compile Include="Protocols\ProtocolHandlerBase.cs" />
     <Compile Include="Protocols\LiveId\WindowsLiveLogin.cs" />
