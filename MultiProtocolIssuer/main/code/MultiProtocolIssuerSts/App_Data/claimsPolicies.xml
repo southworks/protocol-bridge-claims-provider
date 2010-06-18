@@ -17,12 +17,24 @@
 
       <claimType fullName="http://schema.facebook.com/me/id" displayName="facebook.name"/>
       <claimType fullName="http://schema.facebook.com/me/name" displayName="facebook.fullname"/>
+
+      <claimType fullName="http://twitter.com/claims/id" displayName="twitter.id" />
+      <claimType fullName="http://twitter.com/claims/name" displayName="twitter.name" />
+      <claimType fullName="http://twitter.com/claims/screen_name" displayName="twitter.screen_name" />
+      <claimType fullName="http://twitter.com/claims/location" displayName="twitter.location" />
+      <claimType fullName="http://twitter.com/claims/description" displayName="twitter.description" />
+      <claimType fullName="http://twitter.com/claims/profile_image_url" displayName="twitter.profile_image_url" />
+      <claimType fullName="http://twitter.com/claims/url" displayName="twitter.url" />
+      <claimType fullName="http://twitter.com/claims/created_on" displayName="twitter.created_on" />
+      <claimType fullName="http://twitter.com/claims/utc_offset" displayName="twitter.utc_offset" />
+      <claimType fullName="http://twitter.com/claims/lang" displayName="twitter.lang" />
     </claimTypes>
     <issuers>
       <issuer uri="urn:Yahoo:AX" thumbprint="" displayName="YahooOpenID"/>
       <issuer uri="urn:MyOpenId:SReg" thumbprint="" displayName="MyOpenID"/>
       <issuer uri="urn:LiveId" thumbprint="" displayName="LiveId"/>
       <issuer uri="urn:Facebook" thumbprint="" displayName="Facebook"/>
+      <issuer uri="urn:Twitter" thumbprint="" displayName="Twitter"/>
     </issuers>
     <rules>
       <rule assertionsMatch="any">
@@ -88,7 +100,19 @@
         </input>
         <output type="givenname" copyFrom="INPUT_VALUE"/>
       </rule>
-      
+
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="twitter.name" issuer="Twitter" value="*"/>
+        </input>
+        <output type="givenname" copyFrom="INPUT_VALUE"/>
+      </rule>
+      <rule assertionsMatch="any">
+        <input>
+          <claim type="twitter.screen_name" issuer="Twitter" value="*"/>
+        </input>
+        <output type="name" copyFrom="INPUT_VALUE"/>
+      </rule>
     </rules>
   </scope>  
 </scopes>

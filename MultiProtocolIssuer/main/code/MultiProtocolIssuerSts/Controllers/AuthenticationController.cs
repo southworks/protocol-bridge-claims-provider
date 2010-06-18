@@ -75,7 +75,7 @@
 
         public void ProcessResponse()
         {
-            if (string.IsNullOrEmpty(this.federationContext.IssuerName) == null)
+            if (string.IsNullOrEmpty(this.federationContext.IssuerName))
             {
                 throw new InvalidOperationException("The context cookie was not found. Try to re-login");
             }
