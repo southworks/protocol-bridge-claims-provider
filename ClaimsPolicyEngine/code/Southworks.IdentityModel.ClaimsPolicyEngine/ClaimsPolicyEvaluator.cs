@@ -92,10 +92,18 @@
                             outputValue = rule.OutputClaim.Value;
                         }
 
+                        var originalIssuer = mappingScope.Issuers
+                                         .Where(i => i.Uri == matchingInputClaim.OriginalIssuer).FirstOrDefault();
+
+                        string originalIssuerDisplayName = originalIssuer != null ? originalIssuer.DisplayName : matchingInputClaim.Issuer;
+
                         mappedClaims.Add(
                             new Claim(
                                 rule.OutputClaim.ClaimType.FullName,
-                                outputValue));   
+                                outputValue,
+                                matchingInputClaim.ValueType,
+                                matchingInputClaim.Issuer,
+                                originalIssuerDisplayName));
                     }
                 }
             }

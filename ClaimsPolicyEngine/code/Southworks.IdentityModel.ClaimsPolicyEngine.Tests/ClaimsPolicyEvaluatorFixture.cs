@@ -71,14 +71,19 @@
             InputPolicyClaim inputClaim = new InputPolicyClaim(this.issuer, this.inputClaimType, "myInputClaim");
             OutputPolicyClaim outputClaim = new OutputPolicyClaim(this.outputClaimType, "myOutputClaimValue");
             PolicyRule rule = new PolicyRule(AssertionsMatch.Any, new[] { inputClaim }, outputClaim);
-            store.RetrieveScopesReturnValue = new List<PolicyScope>() { new PolicyScope(new Uri("http://myScope"), new[] { rule }) };
 
-            IEnumerable<Claim> evaluatedOutputClaims = evaluator.Evaluate(new Uri("http://myScope"), new[] { new Claim("http://myInputClaimType", "myInputClaim", string.Empty, "http://myInputClaimIssuer") });
+            var policyScope = new PolicyScope(new Uri("http://myScope"), new[] { rule });
+            policyScope.AddIssuer(new Issuer("http://originalIssuer", string.Empty, "OriginalIssuer"));
+            store.RetrieveScopesReturnValue = new List<PolicyScope>() { policyScope };
+
+            IEnumerable<Claim> evaluatedOutputClaims = evaluator.Evaluate(new Uri("http://myScope"), new[] { new Claim("http://myInputClaimType", "myInputClaim", string.Empty, "http://myInputClaimIssuer", "http://originalIssuer") });
 
             Assert.IsNotNull(evaluatedOutputClaims);
             Assert.AreEqual(1, evaluatedOutputClaims.Count());
             Assert.AreEqual("http://myOutputClaimType", evaluatedOutputClaims.ElementAt(0).ClaimType);
             Assert.AreEqual("myOutputClaimValue", evaluatedOutputClaims.ElementAt(0).Value);
+            Assert.AreEqual("http://myInputClaimIssuer", evaluatedOutputClaims.ElementAt(0).Issuer);
+            Assert.AreEqual("OriginalIssuer", evaluatedOutputClaims.ElementAt(0).OriginalIssuer);
         }
 
         [TestMethod]
