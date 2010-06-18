@@ -24,8 +24,8 @@
                         style="background: url(&quot;Content/images/facebook.gif&quot;) no-repeat scroll center center rgb(255, 255, 255);"
                         href="authenticate?whr=urn:Facebook" title="Facebook"></a>                     
                     <a class="openid_large_btn"
-                        style="background: url(&quot;Content/images/twitter.gif&quot;) no-repeat scroll center center rgb(255, 255, 255);"
-                        href="authenticate?whr=urn:Twitter" title="Twitter">Twitter</a>                                    
+                        style="background: url(&quot;Content/images/twitter.png&quot;) no-repeat scroll center center rgb(255, 255, 255);"
+                        href="authenticate?whr=urn:Twitter" title="Twitter"></a>                                    
             </div>
         </div>
         <noscript>
